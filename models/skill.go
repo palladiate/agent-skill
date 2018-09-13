@@ -1,0 +1,49 @@
+package models
+
+type SkillInformation struct {
+	SYSTEMSOURCECODE    *string `json:"SYSTEMSOURCECODE,omitempty" db:"SYSTEMSOURCECODE,omitempty"`
+	DISPLAYNM           *string `json:"DISPLAYNM,omitempty" db:"DISPLAYNM,omitempty"`
+	BLGVENDOR           *string `json:"BLGVENDOR,omitempty" db:"BLGVENDOR,omitempty"`
+	HIGHLVLDESC         *string `json:"HIGHLVLDESC,omitempty" db:"HIGHLVLDESC,omitempty"`
+	LOBTYPE             *string `json:"LOB_TYPE,omitempty" db:"LOB_TYPE,omitempty"`
+	FCSTGRP             *string `json:"FCSTGRP,omitempty" db:"FCSTGRP,omitempty"`
+	FACENM              *string `json:"FACENM,omitempty" db:"FACENM,omitempty"`
+	CUSTCALLCONTACT     *string `json:"CUSTCALLCONTACT,omitempty" db:"CUSTCALLCONTACT,omitempty"`
+	CUSTTYPE            *string `json:"CUSTTYPE,omitempty" db:"CUSTTYPE,omitempty"`
+	OWNERDESC           *string `json:"OWNER_DESC,omitempty" db:"OWNER_DESC,omitempty"`
+	LANG                *string `json:"LANG,omitempty" db:"LANG,omitempty"`
+	SWITCHNM            *string `json:"SWITCHNM,omitempty" db:"SWITCHNM,omitempty"`
+	FCROVERRIDE         *int `json:"FCROVERRIDE,omitempty" db:"FCROVERRIDE,omitempty"`
+	STAFFHRSEXCLUDE     *string `json:"STAFFHRSEXCLUDE,omitempty" db:"STAFFHRSEXCLUDE,omitempty"`
+	NRTSUMRPTID         *int    `json:"NRTSUMRPTID,omitempty" db:"NRTSUMRPTID,omitempty"`
+	SVCLVLSEC           *int    `json:"SVCLVLSEC,omitempty" db:"SVCLVLSEC,omitempty"`
+	ACD                 *int    `json:"ACD,omitempty" db:"ACD,omitempty"`
+	COMPANY             *string `json:"COMPANY,omitempty" db:"COMPANY,omitempty"`
+	MSO                 *string `json:"MSO,omitempty" db:"MSO,omitempty"`
+	STARTDATE           *string `json:"START_DATE,omitempty" db:"START_DATE,omitempty"`
+	ENDDATE             *string `json:"END_DATE,omitempty" db:"END_DATE,omitempty"`
+	QUEUEID             *int    `json:"QUEUEID,omitempty" db:"QUEUEID,omitempty"`
+	SUBPRODUCTFIELD     *string `json:"SUBPRODUCTFIELD,omitempty" db:"SUBPRODUCTFIELD,omitempty"`
+	SECONDARYSWITCHNM   *string `json:"SECONDARYSWITCHNM,omitempty" db:"SECONDARYSWITCHNM,omitempty"`
+	FCRGROUPING         *string `json:"FCRGROUPING,omitempty" db:"FCRGROUPING,omitempty"`
+	FCREXCLUSION        *string `json:"FCREXCLUSION,omitempty" db:"FCREXCLUSION,omitempty"`
+	SUBLOB              *string `json:"SUBLOB,omitempty" db:"SUBLOB,omitempty"`
+	MARKET              *string `json:"MARKET,omitempty" db:"MARKET,omitempty"`
+	QUEUETYPE           *string `json:"QUEUETYPE,omitempty" db:"QUEUETYPE,omitempty"`
+	COMMENTS            *string `json:"COMMENTS,omitempty" db:"COMMENTS,omitempty"`
+	CHANGEID            *string `json:"CHANGE_ID,omitempty" db:"CHANGE_ID,omitempty"`
+	CHANGENOTES         *string `json:"CHANGE_NOTES,omitempty" db:"CHANGE_NOTES,omitempty"`
+	SYSTARGETID         *int    `json:"SYS_TARGET_ID,omitempty" db:"SYS_TARGET_ID,omitempty"`
+	SYSAUTHID           *string `json:"SYS_AUTH_ID,omitempty" db:"SYS_AUTH_ID,omitempty"`
+	SYSSOURCE           *string `json:"SYS_SOURCE,omitempty" db:"SYS_SOURCE,omitempty"`
+	SYSCREATEDBY        *string `json:"SYS_CREATED_BY,omitempty" db:"SYS_CREATED_BY,omitempty"`
+	SYSCREATIONDATE     *string `json:"SYS_CREATION_DATE,omitempty" db:"SYS_CREATION_DATE,omitempty"`
+	SYSENTSTATE         *string `json:"SYS_ENT_STATE,omitempty" db:"SYS_ENT_STATE,omitempty"`
+	SYSLASTMODIFIEDBY   *string `json:"SYS_LAST_MODIFIED_BY,omitempty" db:"SYS_LAST_MODIFIED_BY,omitempty"`
+	SYSLASTMODIFIEDDATE *string `json:"SYS_LAST_MODIFIED_DATE,omitempty" db:"SYS_LAST_MODIFIED_DATE,omitempty"`
+	SYSNCTYPE           *string `json:"SYS_NC_TYPE,omitempty" db:"SYS_NC_TYPE,omitempty"`
+	SYSERRCODE          *string `json:"SYS_ERR_CODE,omitempty" db:"SYS_ERR_CODE,omitempty"`
+	SYSERRSVRTY         *string `json:"SYS_ERR_SVRTY,omitempty" db:"SYS_ERR_SVRTY,omitempty"`
+	INSRTTS             *string `json:"INSRT_TS,omitempty" db:"INSRT_TS,omitempty"`
+}
+
