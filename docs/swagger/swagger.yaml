@@ -1,0 +1,183 @@
+basePath: /peek
+definitions:
+  models.Agent:
+    properties:
+      Area:
+        type: string
+      Avaya:
+        items:
+          $ref: '#/definitions/models.Avaya'
+        type: array
+      Company:
+        type: string
+      Division:
+        type: string
+      EID:
+        type: string
+      FirstName:
+        type: string
+      LastName:
+        type: string
+      Location:
+        type: string
+      PID:
+        type: string
+      Region:
+        type: string
+    type: object
+  models.Avaya:
+    properties:
+      LoginId:
+        type: string
+      Name:
+        type: string
+      Skills:
+        items:
+          $ref: '#/definitions/models.Skill'
+        type: array
+      Switch:
+        type: string
+      Updated:
+        type: string
+    type: object
+  models.Skill:
+    properties:
+      ACD:
+        type: integer
+      BLGVENDOR:
+        type: string
+      CHANGE_ID:
+        type: string
+      CHANGE_NOTES:
+        type: string
+      COMMENTS:
+        type: string
+      COMPANY:
+        type: string
+      CUSTCALLCONTACT:
+        type: string
+      CUSTTYPE:
+        type: string
+      DISPLAYNM:
+        type: string
+      END_DATE:
+        type: string
+      FACENM:
+        type: string
+      FCREXCLUSION:
+        type: string
+      FCRGROUPING:
+        type: string
+      FCROVERRIDE:
+        type: integer
+      FCSTGRP:
+        type: string
+      HIGHLVLDESC:
+        type: string
+      INSRT_TS:
+        type: string
+      LANG:
+        type: string
+      LOB_TYPE:
+        type: string
+      Level:
+        type: string
+      MARKET:
+        type: string
+      MSO:
+        type: string
+      NRTSUMRPTID:
+        type: integer
+      OWNER_DESC:
+        type: string
+      Ordinal:
+        type: integer
+      QUEUEID:
+        type: integer
+      QUEUETYPE:
+        type: string
+      SECONDARYSWITCHNM:
+        type: string
+      STAFFHRSEXCLUDE:
+        type: string
+      START_DATE:
+        type: string
+      SUBLOB:
+        type: string
+      SUBPRODUCTFIELD:
+        type: string
+      SVCLVLSEC:
+        type: integer
+      SWITCHNM:
+        type: string
+      SYS_AUTH_ID:
+        type: string
+      SYS_CREATED_BY:
+        type: string
+      SYS_CREATION_DATE:
+        type: string
+      SYS_ENT_STATE:
+        type: string
+      SYS_ERR_CODE:
+        type: string
+      SYS_ERR_SVRTY:
+        type: string
+      SYS_LAST_MODIFIED_BY:
+        type: string
+      SYS_LAST_MODIFIED_DATE:
+        type: string
+      SYS_NC_TYPE:
+        type: string
+      SYS_SOURCE:
+        type: string
+      SYS_TARGET_ID:
+        type: integer
+      SYSTEMSOURCECODE:
+        type: string
+      SkillId:
+        type: string
+      acd:
+        type: integer
+      hostname:
+        type: string
+    type: object
+host: localhost:9005
+info:
+  contact:
+    email: nicholas.spangler@charter.com
+    name: Nicholas Spangler
+  description: PID.
+  license: {}
+  version: "2.0"
+paths:
+  /v2/login/{login}:
+    get:
+      consumes:
+      - application/json
+      description: PID.
+      parameters:
+      - description: PID
+        in: path
+        name: login
+        required: true
+        type: string
+      responses:
+        "200":
+          description: OK
+          schema:
+            $ref: '#/definitions/models.Agent'
+            type: object
+        "400":
+          description: Bad Request
+          schema:
+            type: string
+        "404":
+          description: Not Found
+          schema:
+            type: string
+        "500":
+          description: Internal Server Error
+          schema:
+            type: string
+      summary: Finds a PID and returns the full account detail object
+swagger: "2.0"
